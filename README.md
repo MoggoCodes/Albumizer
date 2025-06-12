@@ -25,15 +25,40 @@ pixi install
 pixi run python download_models.py
 ```
 
+## Directory Structure
+
+The application uses a specific directory structure for organizing images:
+
+- `Photos/People/`: Store your source face images here
+- `Photos/Albums/`: Store your target album covers here
+- `Photos/Swapped/`: Generated face-swapped images will be saved here
+- `models/`: Contains downloaded AI models
+
 ## Usage
 
-1. Place your source image (the face you want to use) in the project directory as `Headshot.JPG`
-2. Place your target album cover in the project directory as `jam.jpg`
+1. Place your source face image in the `Photos/People/` directory
+2. Place your target album cover in the `Photos/Albums/` directory
 3. Run the face swapper:
+
 ```bash
-pixi run python face_swapper.py
+# Basic usage
+pixi run python face_swapper.py source_image.jpg album_cover.jpg
+
+# With custom output filename
+pixi run python face_swapper.py source_image.jpg album_cover.jpg -o result.png
 ```
-4. The result will be saved as `face_swapped_album.png`
+
+### Examples
+
+```bash
+# Using default output naming (source_on_target.png)
+pixi run python face_swapper.py me.jpg dark_side_of_the_moon.jpg
+
+# Specifying custom output name
+pixi run python face_swapper.py me.jpg abbey_road.jpg -o me_abbey_road.png
+```
+
+The swapped image will be saved in the `Photos/Swapped/` directory.
 
 ## Project Structure
 
