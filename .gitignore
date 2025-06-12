@@ -192,3 +192,33 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# pixi environments
+.pixi
+*.egg-info
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+.pixi/
+models/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.heic
+face_swapped_album.png
+detected_faces.jpg
+
+# Exceptions
+!.gitkeep
