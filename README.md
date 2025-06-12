@@ -14,9 +14,9 @@ git clone <your-repo-url>
 cd Albumizer
 ```
 
-2. Install dependencies using Pixi:
+2. Install all dependencies:
 ```bash
-pixi install
+pixi run install-dependencies
 ```
 
 3. Download the required models:
@@ -41,20 +41,20 @@ The application uses a specific directory structure for organizing images:
 
 ```bash
 # Basic usage
-pixi run python face_swapper.py source_image.jpg album_cover.jpg
+pixi run swap source_image.jpg album_cover.jpg
 
 # With custom output filename
-pixi run python face_swapper.py source_image.jpg album_cover.jpg -o result.png
+pixi run swap source_image.jpg album_cover.jpg -o result.png
 ```
 
 ### Examples
 
 ```bash
 # Using default output naming (source_on_target.png)
-pixi run python face_swapper.py me.jpg dark_side_of_the_moon.jpg
+pixi run swap me.jpg dark_side_of_the_moon.jpg
 
 # Specifying custom output name
-pixi run python face_swapper.py me.jpg abbey_road.jpg -o me_abbey_road.png
+pixi run swap me.jpg abbey_road.jpg -o me_abbey_road.png
 ```
 
 The swapped image will be saved in the `Photos/Swapped/` directory.

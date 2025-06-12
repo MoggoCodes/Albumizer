@@ -6,6 +6,9 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
+install-insightface = "pip install insightface"
+install-dependencies = { depends_on = ["install", "install-insightface"] }
+swap = "python face_swapper.py $@"
 
 [dependencies]
 python = ">=3.13.0"
