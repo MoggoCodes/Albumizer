@@ -16,12 +16,7 @@ cd Albumizer
 
 2. Install all dependencies:
 ```bash
-pixi run install-dependencies
-```
-
-3. Download the required models:
-```bash
-pixi run python download_models.py
+pixi run setup
 ```
 
 ## Directory Structure
@@ -66,6 +61,7 @@ The swapped image will be saved in the `Photos/Swapped/` directory.
 - `models/`: Directory containing downloaded AI models
 - `pixi.toml`: Pixi dependency configuration
 - `pixi.lock`: Pixi lock file
+- `requirements.txt`: Additional pip dependencies
 
 ## License
 

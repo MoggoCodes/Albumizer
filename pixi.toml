@@ -6,8 +6,9 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
-install-insightface = "pip install insightface"
-install-dependencies = { depends_on = ["install", "install-insightface"] }
+pip=deps = "pip install -r requirements.txt"
+download-models = "python download_models.py"
+setup = { depends_on = ["install", "pip-deps", "download_models"] }
 swap = "python face_swapper.py $@"
 
 [dependencies]
