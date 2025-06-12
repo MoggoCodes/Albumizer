@@ -6,10 +6,12 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
-pip=deps = "pip install -r requirements.txt"
 download-models = "python download_models.py"
-setup = { depends_on = ["install", "pip-deps", "download_models"] }
-swap = "python face_swapper.py $@"
+setup = [ {task = "download-models"} ]
+
+[tasks.swap]
+args = ["source", "target"]
+cmd = "python face_swapper.py {{ source }} {{ target }}"
 
 [dependencies]
 python = ">=3.13.0"
@@ -25,3 +27,5 @@ requests = ">=2.32.4,<3"
 tqdm = ">=4.67.1,<5"
 pip = ">=25.1.1,<26"
 
+[pypi-dependencies]
+insightface = ">=0.7.3"
