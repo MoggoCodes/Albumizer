@@ -4,7 +4,6 @@ A Python application for swapping faces in album cover art using InsightFace.
 
 ## Requirements
 
-- Python 3.13 or higher
 - Pixi package manager
 
 ## Installation
