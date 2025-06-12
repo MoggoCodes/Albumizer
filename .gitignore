@@ -211,7 +211,20 @@ ENV/
 
 # Project specific
 .pixi/
-models/
+models/*
+!models/.gitkeep
+!models/*/
+!models/*/.gitkeep
+
+# Photos and Images
+Photos/*
+!Photos/.gitkeep
+!Photos/Albums/
+!Photos/People/
+!Photos/Swapped/
+!Photos/Albums/.gitkeep
+!Photos/People/.gitkeep
+!Photos/Swapped/.gitkeep
 *.jpg
 *.jpeg
 *.png
